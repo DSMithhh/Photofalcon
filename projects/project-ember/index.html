@@ -67,15 +67,27 @@
     }
 
     .photo img {
-      display: block;
-      width: 100%;
-      height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 
-      /* Makes casual saving a little less convenient */
-      user-select: none;
-      -webkit-user-select: none;
-      -webkit-user-drag: none;
-    }
+  /* Prevent selection and dragging */
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+
+  /* Prevent mobile long-press callout */
+  -webkit-touch-callout: none;
+
+  /* Prevent browser interactions with image */
+  pointer-events: none;
+}
+
+.photo {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
 
     /* FOOTER */
 
@@ -243,11 +255,18 @@
 
 
   <script>
-    // Disable the normal right-click menu
-    document.addEventListener("contextmenu", function(event) {
+  // Disable right-click / context menu
+  document.addEventListener("contextmenu", function(event) {
+    event.preventDefault();
+  });
+
+  // Prevent dragging images
+  document.addEventListener("dragstart", function(event) {
+    if (event.target.tagName === "IMG") {
       event.preventDefault();
-    });
-  </script>
+    }
+  });
+</script>
 
 </body>
 </html>
