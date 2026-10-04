@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Photo Falcon</title>
+<meta name="description" content="Portrait, interior, real estate, and nature photography by Photo Falcon in Tahoe and Reno.">
+<link rel="icon" type="image/png" href="/favicon.png">
+<style>
+:root{--bg:#f4f1eb;--text:#171717;--muted:#68645f;--line:rgba(23,23,23,.14);--white:#fff;--max:1500px}
+*{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none} img{display:block;width:100%;height:auto}
+.container{width:min(calc(100% - 40px),var(--max));margin:0 auto}
+header{background:#171717;color:#fff}
+nav{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.logo{display:flex;align-items:center}.logo img{width:auto;height:60px;object-fit:contain}
+.nav-links{display:flex;align-items:center;gap:28px;font-size:.88rem}.nav-links a{opacity:.82}.nav-links a:hover{opacity:1}
+.hero{padding:110px 0 76px}.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:.76rem;color:var(--muted);margin-bottom:18px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(3.5rem,8vw,7rem);font-weight:400;line-height:.95;letter-spacing:-.045em}
+.intro{margin-top:28px;max-width:650px;color:var(--muted);font-size:1.05rem}
+.category-nav{position:sticky;top:0;z-index:20;background:rgba(244,241,235,.96);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.category-nav-inner{min-height:64px;display:flex;align-items:center;gap:34px;overflow-x:auto;white-space:nowrap}
+.category-nav a{text-transform:uppercase;letter-spacing:.13em;font-size:.74rem}
+.category{padding:100px 0 30px;scroll-margin-top:64px}
+.category-heading{display:grid;grid-template-columns:.8fr 1.6fr;gap:50px;align-items:end;margin-bottom:42px}
+.category-number{color:var(--muted);text-transform:uppercase;letter-spacing:.14em;font-size:.75rem}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.7rem,5vw,4.7rem);font-weight:400;line-height:1;letter-spacing:-.04em}
+.gallery{columns:2;column-gap:18px}.photo{break-inside:avoid;margin-bottom:18px;overflow:hidden;background:#e7e2da}
+.photo img{transition:transform .45s ease}.photo:hover img{transform:scale(1.012)}
+.back{padding:90px 0 110px;text-align:center}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border:1px solid var(--text);text-transform:uppercase;letter-spacing:.13em;font-size:.75rem;transition:.25s}
+.button:hover{background:var(--text);color:#fff}
+footer{padding:32px 0;background:#171717;color:rgba(255,255,255,.7);font-size:.82rem}.footer-inner{display:flex;justify-content:space-between;gap:20px}
+@media(max-width:800px){
+.container{width:min(calc(100% - 28px),var(--max))}nav{min-height:70px}.logo img{height:50px}
+.nav-links a:not(.home-link){display:none}.hero{padding:78px 0 55px}.category-nav-inner{gap:24px}
+.category{padding-top:72px}.category-heading{grid-template-columns:1fr;gap:12px;margin-bottom:30px}
+.gallery{columns:1}.photo{margin-bottom:12px}.footer-inner{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header><div class="container"><nav>
+<a href="/" class="logo"><img src="/images/logo.png" alt="Photo Falcon"></a>
+<div class="nav-links"><a class="home-link" href="/">Home</a><a href="/#about">About</a><a href="/#services">Services</a><a href="/#contact">Contact</a></div>
+</nav></div></header>
+
+<main>
+<section class="hero"><div class="container">
+<div class="eyebrow">Photo Falcon · Tahoe · Reno</div>
+<h1>Portfolio</h1>
+<p class="intro">A collection of portraits, interiors, and landscapes — people, spaces, and places photographed with a natural, cinematic approach.</p>
+</div></section>
+
+<div class="category-nav"><div class="container category-nav-inner">
+<a href="#portraits">Portraits</a><a href="#interiors">Interiors</a><a href="#nature">Nature</a>
+</div></div>
+
+<section class="category" id="portraits"><div class="container">
+<div class="category-heading"><div class="category-number">01 · People &amp; stories</div><h2>Portraits</h2></div>
+<div class="gallery">
+<div class="photo"><img src="images/portraits/portrait-01.jpg" alt="Portrait photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/portraits/portrait-02.jpg" alt="Portrait photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/portraits/portrait-03.jpg" alt="Portrait photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/portraits/portrait-04.jpg" alt="Portrait photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/portraits/portrait-05.jpg" alt="Portrait photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/portraits/portrait-06.jpg" alt="Portrait photography by Photo Falcon" loading="lazy"></div>
+</div></div></section>
+
+<section class="category" id="interiors"><div class="container">
+<div class="category-heading"><div class="category-number">02 · Spaces &amp; architecture</div><h2>Interiors</h2></div>
+<div class="gallery">
+<div class="photo"><img src="images/interiors/interior-01.jpg" alt="Interior photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/interiors/interior-02.jpg" alt="Interior photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/interiors/interior-03.jpg" alt="Interior photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/interiors/interior-04.jpg" alt="Interior photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/interiors/interior-05.jpg" alt="Interior photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/interiors/interior-06.jpg" alt="Interior photography by Photo Falcon" loading="lazy"></div>
+</div></div></section>
+
+<section class="category" id="nature"><div class="container">
+<div class="category-heading"><div class="category-number">03 · Tahoe &amp; beyond</div><h2>Nature</h2></div>
+<div class="gallery">
+<div class="photo"><img src="images/nature/nature-01.jpg" alt="Nature photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/nature/nature-02.jpg" alt="Nature photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/nature/nature-03.jpg" alt="Nature photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/nature/nature-04.jpg" alt="Nature photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/nature/nature-05.jpg" alt="Nature photography by Photo Falcon" loading="lazy"></div>
+<div class="photo"><img src="images/nature/nature-06.jpg" alt="Nature photography by Photo Falcon" loading="lazy"></div>
+</div></div></section>
+
+<div class="back"><a href="/" class="button">Back to Home</a></div>
+</main>
+<footer><div class="container footer-inner"><span>©2026 Photo Falcon</span><span>Photography by Daniel Kuznetsov</span></div></footer>
+</body></html>

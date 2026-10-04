@@ -230,32 +230,66 @@
     }
 
     /* PORTFOLIO */
-    .portfolio { background:#171717; color:var(--white); }
-    .portfolio .section-number { color:rgba(255,255,255,.55); }
-    .portfolio-category + .portfolio-category { margin-top:72px; }
-    .portfolio-category-header {
-      display:flex; justify-content:space-between; align-items:baseline; gap:20px;
-      margin-bottom:22px; padding-bottom:14px;
-      border-bottom:1px solid rgba(255,255,255,.18);
+    .portfolio {
+      background: #171717;
+      color: var(--white);
     }
-    .portfolio-category-header h3 {
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(1.8rem,3vw,2.6rem); font-weight:400;
+
+    .portfolio .section-number {
+      color: rgba(255, 255, 255, 0.55);
     }
-    .portfolio-category-header span {
-      color:rgba(255,255,255,.5); font-size:.72rem;
-      letter-spacing:.14em; text-transform:uppercase;
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
     }
-    .portfolio-preview-grid {
-      display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px;
+
+    .portfolio-item {
+      overflow: hidden;
+      background: #2a2a2a;
+      position: relative;
     }
-    .portfolio-preview-item { overflow:hidden; background:#2a2a2a; aspect-ratio:4/5; }
-    .portfolio-preview-item:nth-child(2) { aspect-ratio:4/3; }
-    .portfolio-preview-item img { transition:transform .55s ease; }
-    .portfolio-preview-item:hover img { transform:scale(1.025); }
-    .portfolio-cta { display:flex; justify-content:center; margin-top:68px; }
-    .portfolio .button { border-color:rgba(255,255,255,.7); color:var(--white); }
-    .portfolio .button:hover { background:var(--white); color:var(--text); border-color:var(--white); }
+
+    .portfolio-item img {
+      transition: transform 0.55s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.025);
+    }
+
+   /* Repeating portfolio layout */
+
+    .portfolio-item:nth-child(6n + 1) {
+      grid-column: span 7;
+      aspect-ratio: 16 / 11;
+    }
+    
+    .portfolio-item:nth-child(6n + 2) {
+      grid-column: span 5;
+      aspect-ratio: 4 / 5;
+    }
+    
+    .portfolio-item:nth-child(6n + 3) {
+      grid-column: span 4;
+      aspect-ratio: 4 / 5;
+    }
+    
+    .portfolio-item:nth-child(6n + 4) {
+      grid-column: span 8;
+      aspect-ratio: 16 / 9;
+    }
+    
+    .portfolio-item:nth-child(6n + 5) {
+      grid-column: span 7;
+      aspect-ratio: 16 / 10;
+    }
+    
+    .portfolio-item:nth-child(6n + 6) {
+      grid-column: span 5;
+      aspect-ratio: 4 / 5;
+    }
 
     /* SERVICES */
     .services-list {
@@ -382,12 +416,23 @@
         align-items: start;
       }
 
-      .portfolio-preview-grid { grid-template-columns:1fr; gap:12px; }
-      .portfolio-preview-item,
-      .portfolio-preview-item:nth-child(2) { aspect-ratio:auto; }
-      .portfolio-preview-item img { height:auto; object-fit:contain; }
-      .portfolio-category + .portfolio-category { margin-top:54px; }
-.service {
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-item:nth-child(n) {
+        grid-column: auto;
+        aspect-ratio: 4 / 5;
+      }
+
+      .portfolio-item:nth-child(1),
+      .portfolio-item:nth-child(4),
+      .portfolio-item:nth-child(5) {
+        aspect-ratio: 4 / 3;
+      }
+
+      .service {
         grid-template-columns: 40px 1fr;
       }
 
@@ -480,39 +525,56 @@
 
     <section class="portfolio" id="portfolio">
       <div class="container">
+
         <div class="section-heading">
-          <div class="section-number"></div>
+          <div class="section-number"> </div>
           <h2>Portfolio</h2>
         </div>
 
-        <div class="portfolio-category">
-          <div class="portfolio-category-header"><h3>Portraits</h3><span>People &amp; stories</span></div>
-          <div class="portfolio-preview-grid">
-            <div class="portfolio-preview-item"><img src="images/photo-1.jpg" alt="Portrait photography by Photo Falcon" loading="lazy"></div>
-            <div class="portfolio-preview-item"><img src="images/photo-2.jpg" alt="Portrait photography by Photo Falcon" loading="lazy"></div>
-            <div class="portfolio-preview-item"><img src="images/photo-3.jpg" alt="Portrait photography by Photo Falcon" loading="lazy"></div>
+       <div class="portfolio-grid">
+
+          <div class="portfolio-item">
+            <img src="images/photo-1.jpg" alt="Photography portfolio image 1" loading="lazy" />
           </div>
+
+          <div class="portfolio-item">
+            <img src="images/photo-2.jpg" alt="Photography portfolio image 2" loading="lazy" />
+          </div>
+
+          <div class="portfolio-item">
+            <img src="images/photo-3.jpg" alt="Photography portfolio image 3" loading="lazy" />
+          </div>
+
+          <div class="portfolio-item">
+            <img src="images/photo-4.jpg" alt="Photography portfolio image 4" loading="lazy" />
+          </div>
+
+          <div class="portfolio-item">
+            <img src="images/photo-5.jpg" alt="Photography portfolio image 5" loading="lazy" />
+          </div>
+
+          <div class="portfolio-item">
+            <img src="images/photo-6.jpg" alt="Photography portfolio image 6" loading="lazy" />
+          </div>
+
+         <div class="portfolio-item">
+            <img src="images/photo-7.jpg" alt="Photography portfolio image 1" loading="lazy">
+          </div>
+
+        <div class="portfolio-item">
+            <img src="images/photo-8.jpg" alt="Photography portfolio image 2" loading="lazy">
         </div>
 
-        <div class="portfolio-category">
-          <div class="portfolio-category-header"><h3>Interiors</h3><span>Spaces &amp; architecture</span></div>
-          <div class="portfolio-preview-grid">
-            <div class="portfolio-preview-item"><img src="images/photo-4.jpg" alt="Interior photography by Photo Falcon" loading="lazy"></div>
-            <div class="portfolio-preview-item"><img src="images/photo-5.jpg" alt="Interior photography by Photo Falcon" loading="lazy"></div>
-            <div class="portfolio-preview-item"><img src="images/photo-6.jpg" alt="Interior photography by Photo Falcon" loading="lazy"></div>
-          </div>
+        <div class="portfolio-item">
+          <img src="images/photo-9.jpg" alt="Photography portfolio image 3" loading="lazy">
         </div>
 
-        <div class="portfolio-category">
-          <div class="portfolio-category-header"><h3>Nature</h3><span>Tahoe &amp; beyond</span></div>
-          <div class="portfolio-preview-grid">
-            <div class="portfolio-preview-item"><img src="images/photo-7.jpg" alt="Nature photography by Photo Falcon" loading="lazy"></div>
-            <div class="portfolio-preview-item"><img src="images/photo-8.jpg" alt="Nature photography by Photo Falcon" loading="lazy"></div>
-            <div class="portfolio-preview-item"><img src="images/photo-9.jpg" alt="Nature photography by Photo Falcon" loading="lazy"></div>
-          </div>
+        <div class="portfolio-item">
+          <img src="images/photo-10.jpg" alt="Photography portfolio image 4" loading="lazy">
         </div>
 
-        <div class="portfolio-cta"><a href="/portfolio/" class="button">View Full Portfolio</a></div>
+
+        </div>
       </div>
     </section>
 
