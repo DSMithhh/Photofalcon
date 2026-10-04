@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Photo Falcon | Client Gallery</title>
+
+  <!-- Don't ask search engines to index this page -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      background: #111111;
+    }
+
+    body {
+      background: #111111;
+      color: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* HEADER */
+
+    .header {
+      padding: 40px 30px 30px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .header p {
+      margin-top: 10px;
+      color: rgba(255,255,255,0.55);
+      font-size: 0.85rem;
+    }
+
+    /* GALLERY */
+
+    .gallery {
+      width: calc(100% - 40px);
+      max-width: 1800px;
+      margin: 0 auto;
+      padding-bottom: 40px;
+
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+
+      align-items: start;
+    }
+
+    .photo {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .photo img {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      /* Makes casual saving a little less convenient */
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px 20px 45px;
+      text-align: center;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.75rem;
+    }
+
+    /* PHONE */
+
+    @media (max-width: 700px) {
+      .header {
+        padding: 30px 15px 22px;
+      }
+
+      .gallery {
+        width: calc(100% - 20px);
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+    <h1>Photo Falcon</h1>
+    <p>Client Gallery</p>
+  </header>
+
+
+  <main class="gallery">
+
+    <div class="photo">
+      <img src="images/01.jpg" alt="" draggable="false">
+    </div>
+
+    <div class="photo">
+      <img src="images/02.jpg" alt="" draggable="false">
+    </div>
+
+    <div class="photo">
+      <img src="images/03.jpg" alt="" draggable="false">
+    </div>
+
+    <div class="photo">
+      <img src="images/04.jpg" alt="" draggable="false">
+    </div>
+
+    <div class="photo">
+      <img src="images/05.jpg" alt="" draggable="false">
+    </div>
+
+    <div class="photo">
+      <img src="images/06.jpg" alt="" draggable="false">
+    </div>
+
+  </main>
+
+
+  <footer>
+    © 2026 Photo Falcon · Photography by Daniel Kuznetsov
+  </footer>
+
+
+  <script>
+    // Disable the normal right-click menu
+    document.addEventListener("contextmenu", function(event) {
+      event.preventDefault();
+    });
+  </script>
+
+</body>
+</html>
