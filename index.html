@@ -46,7 +46,7 @@ footer{border-top-color:#b981503c}
 
 /* Full-screen project gallery */
 .project{cursor:pointer}.project:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
-.project-meta:after{content:"VIEW PHOTOS ↗";display:block;font:10px Arial;letter-spacing:.12em;color:#e4b88d;margin-top:9px}
+
 .gallery-overlay{position:fixed;inset:0;z-index:100;background:#080809;display:none;flex-direction:column;color:#f1e9df}
 .gallery-overlay.open{display:flex}
 .gallery-header{flex:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 5%;border-bottom:1px solid #a9774c55;min-height:72px}
@@ -101,15 +101,24 @@ img{-webkit-user-select:none;user-select:none;-webkit-user-drag:none} .gallery-v
 .photo,.stack-image,.portrait-item .stack-image{background:linear-gradient(135deg,#211c19,#0b0b0d 65%,#261c16)}
 .project:hover .photo img,.stack-item:hover .stack-image img{transform:none!important}
 .gallery-slide img{object-fit:contain!important;max-width:100%;max-height:100%;width:auto;height:auto}
+
+/* Clean, frameless project previews: consistent visible image height. */
+.photo{height:clamp(300px,51vw,430px);border:0!important;background:transparent!important;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.photo:after{display:none!important}
+.photo img{display:block;width:auto!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important}
+.project:hover .photo img{transform:none!important}
+.project-meta{display:block;padding-top:15px}
+.project-meta h3{margin:0;line-height:1.5;overflow-wrap:normal}
+.project-meta:after{content:none!important;display:none!important}
 </style></head><body oncontextmenu="return !event.target.closest('img, .photo, .stack-image, .gallery-view, .hero')">
 <header class="top" id="home"><a aria-label="Photo Falcon — Home" class="brand brand-logo" href="#home"><img alt="Photo Falcon logo" src="assets/falcon-logo.png"/><span>PHOTO <b>FALCON</b></span></a><nav aria-label="Main navigation" class="header-nav"><a href="portfolio.html">PORTFOLIO ↗</a><a class="header-contact" href="#contact">CONTACT ↗</a></nav></header>
 <main><section class="hero"><div aria-label="Luxury architectural interior" class="hero-image" role="img"></div><div class="hero-content"><div class="eyebrow">PHOTO FALCON · TAHOE / TRUCKEE, CA</div><h1>Spaces.<br/><em>Captured.</em></h1><p>Interiors · Architecture · Portraits</p><a class="cta" href="#work">VIEW PROJECTS ↘</a></div></section>
 <section class="section" id="work"><div class="section-heading"><div><div class="eyebrow">01 / Featured work</div><h2>Selected projects.</h2></div><div class="hint">SWIPE / DRAG →<br/>AUTO · 20 SEC</div></div><div aria-label="Featured projects, swipe horizontally" class="track" id="projectTrack" tabindex="0">
-<article aria-label="Open project photo gallery" class="project" role="button" tabindex="0"><div class="photo"><img alt="interior · architecture photo" decoding="async" loading="lazy" src="photos/project-copper/00.webp"/></div><div class="project-meta"><h3>INTERIOR · BUSINESS</h3><span>VIEW GALLERY ↗</span></div></article>
-<article aria-label="Open project photo gallery" class="project" role="button" tabindex="0"><div class="photo"><img alt="interior · residential photo" decoding="async" loading="lazy" src="photos/project-ember/00.webp"/></div><div class="project-meta"><h3>INTERIOR · RESIDENTIAL</h3><span>VIEW GALLERY ↗</span></div></article>
-<article aria-label="Open project photo gallery" class="project" role="button" tabindex="0"><div class="photo"><img alt="interior · architecture photo" decoding="async" loading="lazy" src="photos/project-olga/00.webp"/></div><div class="project-meta"><h3>INTERIOR · EXTERIOR · RESIDENTIAL</h3><span>VIEW GALLERY ↗</span></div></article>
-<article aria-label="Open project photo gallery" class="project" role="button" tabindex="0"><div class="photo"><img alt="portrait · editorial photo" decoding="async" loading="lazy" src="photos/portrait-1/00.webp"/></div><div class="project-meta"><h3>PORTRAIT · EDITORIAL</h3><span>VIEW GALLERY ↗</span></div></article>
-<article aria-label="Open project photo gallery" class="project" role="button" tabindex="0"><div class="photo"><img alt="portrait · business photo" decoding="async" loading="lazy" src="photos/portrait-3/00.webp"/></div><div class="project-meta"><h3>PORTRAIT · EDITORIAL</h3><span>VIEW GALLERY ↗</span></div></article>
+<article aria-label="Open project photo gallery" class="project" role="button" tabindex="0"><div class="photo"><img alt="interior · architecture photo" decoding="async" loading="lazy" src="photos/project-copper/00.webp"/></div><div class="project-meta"><h3>INTERIOR · BUSINESS</h3></div></article>
+<article aria-label="Open project photo gallery" class="project" role="button" tabindex="0"><div class="photo"><img alt="interior · residential photo" decoding="async" loading="lazy" src="photos/project-ember/00.webp"/></div><div class="project-meta"><h3>INTERIOR · RESIDENTIAL</h3></div></article>
+<article aria-label="Open project photo gallery" class="project" role="button" tabindex="0"><div class="photo"><img alt="interior · architecture photo" decoding="async" loading="lazy" src="photos/project-olga/00.webp"/></div><div class="project-meta"><h3>INTERIOR · EXTERIOR · RESIDENTIAL</h3></div></article>
+<article aria-label="Open project photo gallery" class="project" role="button" tabindex="0"><div class="photo"><img alt="portrait · editorial photo" decoding="async" loading="lazy" src="photos/portrait-1/00.webp"/></div><div class="project-meta"><h3>PORTRAIT · EDITORIAL</h3></div></article>
+<article aria-label="Open project photo gallery" class="project" role="button" tabindex="0"><div class="photo"><img alt="portrait · business photo" decoding="async" loading="lazy" src="photos/portrait-3/00.webp"/></div><div class="project-meta"><h3>PORTRAIT · EDITORIAL</h3></div></article>
 </div><div aria-hidden="true" class="progress"><i id="progressBar"></i></div><a class="portfolio-teaser" href="portfolio.html">EXPLORE THE FULL PORTFOLIO <span>VIEW ALL PROJECTS ↗</span></a></section>
 <section class="details" id="details"><div><span class="eyebrow">PHOTOGRAPHY</span><p>Interiors · Architecture · Portraits</p></div><div><span class="eyebrow">LOCATION</span><p>Lake Tahoe / Truckee, California</p></div></section><section class="contact" id="contact"><div class="eyebrow">CONTACT</div><h2>Get in touch.</h2><div class="contact-links"><a href="mailto:photofalcon@outlook.com?subject=Photo%20Falcon%20Inquiry">photofalcon@outlook.com ↗</a><a href="tel:+18582604070">+1 (858) 260-4070 ↗</a></div></section></main><footer><span>© 2026 PHOTO FALCON</span><span>DESIGN PROTOTYPE / NOT LIVE</span></footer>
 <div aria-hidden="true" aria-label="Project photographs" aria-modal="true" class="gallery-overlay" id="galleryOverlay" role="dialog">
